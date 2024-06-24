@@ -2,8 +2,92 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
   
+}
+
+.bg {
+  margin: 20px 200px 20px 200px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  background-color: black;
+  color: whitesmoke;
+
+  position: fixed;
+  width: 100vw;
+  margin: auto;
+  padding: 20px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+header nav a {
+  padding: 4px;
+}
+
+header div nav ul a::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 2px;
+  transition: 0.3s ;
+  background: #fff;
+}
+
+header a:hover:after {
+  width: 100%;
+}
+
+
+header ul {
+  display: flex;
+  gap: 40px;
+
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+@media (max-width: 1100px) {
+  header div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  header div nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header li {
+    background: #111;
+    padding: 20px;
+  }
+
+  header .bg {
+    margin: auto ;
+  }
+
+  header div nav ul a::after {
+    display: none;
+  }
+ 
 }
